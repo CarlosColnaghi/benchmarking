@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t carloscolnaghi/benchmarking:${{ env.RELEASE_VERSION }} .
+        run: docker build -t carloscolnaghi/benchmarking:${GITHUB_REF##*/} .
 
       - name: Push Docker image
-        run: docker push carloscolnaghi/benchmarking:${{ env.RELEASE_VERSION }}
+        run: docker push carloscolnaghi/benchmarking:${GITHUB_REF##*/}
