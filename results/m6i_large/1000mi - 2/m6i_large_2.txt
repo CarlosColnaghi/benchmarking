@@ -1,0 +1,91 @@
+Execução 2:
+Comando: ab -m GET -n 1000 -c 100 http://localhost:8081/api/calculator/factorial/1000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /api/calculator/factorial/1000
+Document Length:        2568 bytes
+
+Concurrency Level:      100
+Time taken for tests:   19.162 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      2673000 bytes
+HTML transferred:       2568000 bytes
+Requests per second:    52.19 [#/sec] (mean)
+Time per request:       1916.231 [ms] (mean)
+Time per request:       19.162 [ms] (mean, across all concurrent requests)
+Transfer rate:          136.22 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.7      0       4
+Processing:  1454 1819 338.3   1665    2531
+Waiting:      452  981 478.1    773    2524
+Total:       1454 1820 338.7   1665    2532
+WARNING: The median and mean for the initial connection time are not within a normal deviation
+        These results are probably not that reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%   1665
+  66%   1895
+  75%   2086
+  80%   2235
+  90%   2527
+  95%   2529
+  98%   2529
+  99%   2530
+ 100%   2532 (longest request)
+---------------------------------
+Comando: ab -m GET -n 2000 -c 200 http://localhost:8081/api/calculator/factorial/2000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /api/calculator/factorial/2000
+Document Length:        5736 bytes
+
+Concurrency Level:      200
+Time taken for tests:   76.539 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      11682000 bytes
+HTML transferred:       11472000 bytes
+Requests per second:    26.13 [#/sec] (mean)
+Time per request:       7653.864 [ms] (mean)
+Time per request:       38.269 [ms] (mean, across all concurrent requests)
+Transfer rate:          149.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    2   1.8      1      11
+Processing:  5938 7592 1047.5   7588    9251
+Waiting:      520 4060 2104.2   3989    9051
+Total:       5939 7593 1047.4   7589    9251
+
+Percentage of the requests served within a certain time (ms)
+  50%   7589
+  66%   7894
+  75%   8511
+  80%   9052
+  90%   9154
+  95%   9241
+  98%   9244
+  99%   9245
+ 100%   9251 (longest request)
+---------------------------------

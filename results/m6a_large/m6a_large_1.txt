@@ -1,0 +1,89 @@
+Execução 1:
+Comando: ab -m GET -n 1000 -c 100 http://localhost:8081/api/calculator/factorial/1000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /api/calculator/factorial/1000
+Document Length:        2568 bytes
+
+Concurrency Level:      100
+Time taken for tests:   17.462 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      2673000 bytes
+HTML transferred:       2568000 bytes
+Requests per second:    57.27 [#/sec] (mean)
+Time per request:       1746.192 [ms] (mean)
+Time per request:       17.462 [ms] (mean, across all concurrent requests)
+Transfer rate:          149.49 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.7      0       4
+Processing:  1458 1632 175.8   1566    2226
+Waiting:      459  712 295.4    601    2078
+Total:       1458 1632 176.3   1567    2227
+
+Percentage of the requests served within a certain time (ms)
+  50%   1567
+  66%   1614
+  75%   1637
+  80%   1668
+  90%   2081
+  95%   2083
+  98%   2085
+  99%   2089
+ 100%   2227 (longest request)
+---------------------------------
+Comando: ab -m GET -n 2000 -c 200 http://localhost:8081/api/calculator/factorial/2000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /api/calculator/factorial/2000
+Document Length:        5736 bytes
+
+Concurrency Level:      200
+Time taken for tests:   76.255 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      11682000 bytes
+HTML transferred:       11472000 bytes
+Requests per second:    26.23 [#/sec] (mean)
+Time per request:       7625.549 [ms] (mean)
+Time per request:       38.128 [ms] (mean, across all concurrent requests)
+Transfer rate:          149.61 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    2   1.5      1       8
+Processing:  3326 7574 1781.1   7413   15385
+Waiting:      495 4237 2332.9   4153   11872
+Total:       3326 7575 1780.6   7413   15385
+
+Percentage of the requests served within a certain time (ms)
+  50%   7413
+  66%   8069
+  75%   8515
+  80%   8660
+  90%  11877
+  95%  11924
+  98%  11927
+  99%  11929
+ 100%  15385 (longest request)
+---------------------------------

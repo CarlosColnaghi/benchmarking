@@ -1,0 +1,104 @@
+Execução 2:
+Comando: ab -m GET -n 1000 -c 100 http://localhost:8081/api/calculator/factorial/1000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /api/calculator/factorial/1000
+Document Length:        2568 bytes
+
+Concurrency Level:      100
+Time taken for tests:   20.587 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      2673000 bytes
+HTML transferred:       2568000 bytes
+Requests per second:    48.57 [#/sec] (mean)
+Time per request:       2058.711 [ms] (mean)
+Time per request:       20.587 [ms] (mean, across all concurrent requests)
+Transfer rate:          126.80 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.6      0       3
+Processing:  1538 1920 267.2   1862    3384
+Waiting:      453  934 277.5    853    2482
+Total:       1538 1920 267.4   1862    3385
+
+Percentage of the requests served within a certain time (ms)
+  50%   1862
+  66%   1952
+  75%   2024
+  80%   2057
+  90%   2215
+  95%   2354
+  98%   2921
+  99%   3031
+ 100%   3385 (longest request)
+---------------------------------
+Comando: ab -m GET -n 2000 -c 200 http://localhost:8081/api/calculator/factorial/2000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            8081
+
+Document Path:          /api/calculator/factorial/2000
+Document Length:        5736 bytes
+
+Concurrency Level:      200
+Time taken for tests:   87.690 seconds
+Complete requests:      2000
+Failed requests:        0
+Total transferred:      11682000 bytes
+HTML transferred:       11472000 bytes
+Requests per second:    22.81 [#/sec] (mean)
+Time per request:       8769.044 [ms] (mean)
+Time per request:       43.845 [ms] (mean, across all concurrent requests)
+Transfer rate:          130.10 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   2.2      0      11
+Processing:  1455 8420 2924.4   8150   21049
+Waiting:      456 7416 2917.7   7107   20302
+Total:       1455 8421 2923.8   8150   21049
+
+Percentage of the requests served within a certain time (ms)
+  50%   8150
+  66%   9301
+  75%  10131
+  80%  10695
+  90%  12207
+  95%  13705
+  98%  15886
+  99%  16694
+ 100%  21049 (longest request)
+---------------------------------
+Execução 2:
+Comando: ab -m GET -n 1000 -c 100 http://localhost:8081/api/calculator/factorial/1000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+---------------------------------
+Comando: ab -m GET -n 2000 -c 200 http://localhost:8081/api/calculator/factorial/2000
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+---------------------------------

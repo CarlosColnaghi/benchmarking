@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: benchmarking
+  labels:
+    app: benchmarking
+  namespace: benchmarking
+spec:
+  selector:
+    app: benchmarking
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
