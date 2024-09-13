@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t carloscolnaghi/benchmarking:${GITHUB_REF##*/} .
+        run: docker build --tag carloscolnaghi/benchmarking:${GITHUB_REF##*/} --tag carloscolnaghi/benchmarking:latest .
 
       - name: Push Docker image
-        run: docker push carloscolnaghi/benchmarking:${GITHUB_REF##*/}
+        run: docker push carloscolnaghi/benchmarking --all-tags
